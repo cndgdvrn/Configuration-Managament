@@ -1,0 +1,114 @@
+services:
+  # MongoDB - Konfigürasyon veritabanı
+  mongodb:
+    image: mongo:latest
+    container_name: config_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: DynamicConfig
+    volumes:
+      - mongo_data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    networks:
+      - config-network
+
+  # RabbitMQ 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: config_rabbitmq
+    restart: unless-stopped
+    ports:
+      - "5672:5672"   
+      - "15672:15672" 
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - config-network
+
+  # Admin API - Konfigürasyon yönetimi
+  config-admin-api:
+    container_name: config_admin_api
+    build:
+      context: .
+      dockerfile: src/DynamicConfig.Admin/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=80
+      - ConnectionStrings__MongoDb=mongodb://admin:password123@mongodb:27017/DynamicConfig?authSource=admin
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+      - RabbitMq__Username=guest
+      - RabbitMq__Password=guest
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - config-network
+
+  # Örnek Servis A - Kütüphane kullanımına örnek olsun diye
+  sample-service-a:
+    container_name: sample_service_a
+    build:
+      context: .
+      dockerfile: src/Sample.ServiceA/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=80
+      - ApplicationName=SERVICE-A
+      - ConnectionStrings__MongoDb=mongodb://admin:password123@mongodb:27017/DynamicConfig?authSource=admin
+      - ConfigRefreshIntervalMs=300000
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+      - RabbitMq__Username=guest
+      - RabbitMq__Password=guest
+    depends_on:
+      - config-admin-api
+    networks:
+      - config-network
+
+  # Runtime'da yeni servis eklenmesini göstermek için 
+  sample-service-b:
+    container_name: sample_service_b
+    build:
+      context: .
+      dockerfile: src/Sample.ServiceA/Dockerfile  # Aynı image
+    restart: unless-stopped
+    ports:
+      - "8082:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=80
+      - ApplicationName=SERVICE-B  
+      - ConnectionStrings__MongoDb=mongodb://admin:password123@mongodb:27017/DynamicConfig?authSource=admin
+      - ConfigRefreshIntervalMs=300000
+      - RabbitMq__HostName=rabbitmq
+      - RabbitMq__Port=5672
+      - RabbitMq__Username=guest
+      - RabbitMq__Password=guest
+    depends_on:
+      - config-admin-api
+    networks:
+      - config-network
+
+volumes:
+  mongo_data:
+    driver: local
+  rabbitmq_data:
+    driver: local
+
+networks:
+  config-network:
+    driver: bridge 

@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\can\\Desktop\\secil-case-c#-v2\\src\\DynamicConfig.Admin\\wwwroot\\app.js",
+      "PackagePath": "staticwebassets\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\can\\Desktop\\secil-case-c#-v2\\src\\DynamicConfig.Admin\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DynamicConfig.Admin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DynamicConfig.Admin.props",
+      "PackagePath": "build\\DynamicConfig.Admin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DynamicConfig.Admin.props",
+      "PackagePath": "buildMultiTargeting\\DynamicConfig.Admin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DynamicConfig.Admin.props",
+      "PackagePath": "buildTransitive\\DynamicConfig.Admin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

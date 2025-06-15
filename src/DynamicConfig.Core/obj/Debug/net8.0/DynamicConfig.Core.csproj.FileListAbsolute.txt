@@ -1,0 +1,12 @@
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\DynamicConfig.Core.csproj.AssemblyReference.cache
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\DynamicConfig.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\DynamicConfig.Core.AssemblyInfoInputs.cache
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\DynamicConfig.Core.AssemblyInfo.cs
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\DynamicConfig.Core.csproj.CoreCompileInputs.cache
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\bin\Debug\net8.0\DynamicConfig.Core.deps.json
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\bin\Debug\net8.0\DynamicConfig.Core.dll
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\bin\Debug\net8.0\DynamicConfig.Core.pdb
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\DynamicConfig.Core.dll
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\refint\DynamicConfig.Core.dll
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\DynamicConfig.Core.pdb
+C:\Users\can\Desktop\secil-case-c#-v2\src\DynamicConfig.Core\obj\Debug\net8.0\ref\DynamicConfig.Core.dll

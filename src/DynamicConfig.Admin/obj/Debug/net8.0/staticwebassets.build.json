@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "8HtaaxUUQK5FWU00FhY6ODOXzCCD4RhkTYQI2WZsj1I=",
+  "Source": "DynamicConfig.Admin",
+  "BasePath": "_content/DynamicConfig.Admin",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DynamicConfig.Admin\\wwwroot",
+      "Source": "DynamicConfig.Admin",
+      "ContentRoot": "C:\\Users\\can\\Desktop\\secil-case-c#-v2\\src\\DynamicConfig.Admin\\wwwroot\\",
+      "BasePath": "_content/DynamicConfig.Admin",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\can\\Desktop\\secil-case-c#-v2\\src\\DynamicConfig.Admin\\wwwroot\\app.js",
+      "SourceId": "DynamicConfig.Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\can\\Desktop\\secil-case-c#-v2\\src\\DynamicConfig.Admin\\wwwroot\\",
+      "BasePath": "_content/DynamicConfig.Admin",
+      "RelativePath": "app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.js"
+    },
+    {
+      "Identity": "C:\\Users\\can\\Desktop\\secil-case-c#-v2\\src\\DynamicConfig.Admin\\wwwroot\\index.html",
+      "SourceId": "DynamicConfig.Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\can\\Desktop\\secil-case-c#-v2\\src\\DynamicConfig.Admin\\wwwroot\\",
+      "BasePath": "_content/DynamicConfig.Admin",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
