@@ -32,7 +32,7 @@ Bu proje, .NET 8 tabanlı dinamik konfigürasyon yönetim sistemidir. Uygulamala
 1. **Projeyi klonlayın:**
 ```bash
 git clone https://github.com/cndgdvrn/Configuration-Managament
-cd secil-case-c#-v2
+cd Configuration-Management
 ```
 
 2. **Docker ile çalıştırın:**
